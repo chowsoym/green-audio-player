@@ -1,4 +1,4 @@
-/* jshint esversion: 6 */ 
+/* jshint esversion: 6 */
 class GreenAudioPlayer {
     constructor(player, options) {
         this.audioPlayer = typeof player === 'string' ? document.querySelector(player) : player;
@@ -229,7 +229,7 @@ class GreenAudioPlayer {
             self.hasSetAttribute(self.playPauseBtn, 'title', self.labels.play);
         });
         this.player.addEventListener('timeupdate', () => {
-            if(!self.player.paused) {
+            if (!self.player.paused) {
                 const playPauseButton = self.player.parentElement.querySelector('.play-pause-btn__icon');
                 playPauseButton.attributes.d.value = 'M0 0h6v24H0zM12 0h6v24h-6z';
                 self.playPauseBtn.setAttribute('aria-label', self.labels.pause);
